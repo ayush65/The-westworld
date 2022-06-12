@@ -1,0 +1,13 @@
+.sidebar-row{
+    align-items: center;
+    display: flex;
+    padding: 0.5em;
+}
+.sidebar-row:hover{
+    cursor: pointer;
+    background-color: #EFEBCE;
+    color: white;
+}
+.sidebar-icons{
+    padding:  1rem;
+}
