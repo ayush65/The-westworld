@@ -1,0 +1,36 @@
+.video-avatar{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.videocard-header{
+    display: flex;
+    font-size: 0.8rem;
+}
+.video-card-footer {
+    display: flex;
+    padding: 1rem;
+}
+.video-card-footer{
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    margin-top:  -0.8rem;;
+}
+.channel-name{
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-top: 0%;
+}
+.footer-margin{
+    margin-right: 1rem;
+}
+.videocard-container{
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 500px) { 
+    .videocard-container{
+        width: 50%;
+    }
+ }
