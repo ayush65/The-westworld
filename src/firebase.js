@@ -6,16 +6,15 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC1OvHM1V8e2HekN2nJ2qMfLWLqPJNgNOo",
-  authDomain: "the-westworld.firebaseapp.com",
-  projectId: "the-westworld",
-  storageBucket: "the-westworld.appspot.com",
-  messagingSenderId: "542481451168",
-  appId: "1:542481451168:web:f87051ff513d1dcaf2a1c5"
+  apiKey: "AIzaSyAwh-F0anqTPz1Pmlg4BFp4VWBsajwxcSw",
+  authDomain: "westside-d06be.firebaseapp.com",
+  projectId: "westside-d06be",
+  storageBucket: "westside-d06be.appspot.com",
+  messagingSenderId: "61693834048",
+  appId: "1:61693834048:web:5909bb2514c5c9778680a5"
 };
 
+// Initialize Firebase
 initializeApp(firebaseConfig);
-
-export  default getFirestore();
-
+export default getFirestore();
 

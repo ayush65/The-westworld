@@ -26,11 +26,14 @@
 }
 .videocard-container{
     margin-right: 1rem;
+    border: 1px solid gray;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 @media (max-width: 500px) { 
     .videocard-container{
         width: 50%;
+        font-size: 0.2rem;
     }
  }
