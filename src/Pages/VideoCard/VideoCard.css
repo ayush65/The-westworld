@@ -44,7 +44,7 @@
 .model-icon{
     font-size:1.3rem;
     position: absolute;
-    margin-left: 16rem;
+    margin-left: 18rem;
     margin-top: 15rem;
 }
 .modal-contents{
@@ -61,7 +61,12 @@
 .modal-header-icon{
     display: flex;
     gap: 2rem;
-    
+}
+.modal-container-playlist{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
 }
 @media (max-width: 500px) { 
     .videocard-container{

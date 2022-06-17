@@ -133,7 +133,7 @@ function VideoCard({imgsrc , avatar , songName , channelname , views , timestamp
         </div>
       )}
        {playlistmodal && (
-           <div className="modal-container">
+           <div className="modal-container-playlist">
            <div onClick={toggleModal} className="overlays"></div>
            <div className="modal-contents">
            <div className="modal-header-icon" onClick={toggleplaylistModal}><AiFillCloseCircle /><p>Close</p></div>
