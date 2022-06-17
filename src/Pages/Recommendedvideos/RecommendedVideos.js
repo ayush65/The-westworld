@@ -1,7 +1,6 @@
 import React from 'react'
 import VideoCard from '../VideoCard/VideoCard'
 import "./RecommendedVideos.css"
-
 import { onSnapshot, collection  } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import db from "../../firebase";
@@ -25,9 +24,9 @@ function RecommendedVideos() {
     <div className="recommendedvideo-container">
         <h2>Recommended</h2>
         <div className="recommended-video">
-        {videos.map(({ id , data : { name , imgsrc , channel , timestamp , views , channelimg}})  =>  (
+        {videos.map(({ id , data : { name , imgsrc , channel , timestamp , views , channelimg , videoid}})  =>  (
 
-                            <VideoCard
+                            <VideoCard className="video"
                             key={id} 
                             imgsrc={imgsrc}
                             songName={name}
@@ -35,7 +34,9 @@ function RecommendedVideos() {
                             avatar={channelimg}
                             views={views}
                             timestamp={timestamp}
+                            videoid={videoid}
                             />
+                            
         ))
         }
         </div>
