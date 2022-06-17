@@ -62,12 +62,6 @@
     display: flex;
     gap: 2rem;
 }
-.modal-container-playlist{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-}
 @media (max-width: 500px) { 
     .videocard-container{
         width: 50%;
