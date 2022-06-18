@@ -1,3 +1,20 @@
-.sidebar-container{
-    flex: 0.2;
+.sidebar-container {
+  flex: 0.15;
+  justify-content: space-between;
+  width: 10rem;
+}
+.sidebar-row {
+  align-items: center;
+  display: flex;
+  padding: 0.5em;
+}
+.sidebar-row:hover {
+  cursor: pointer;
+  background-color: #efebce;
+  color: white;
+}
+.sidebar-icons {
+  padding: 1rem;
+  text-decoration: none;
+  display: flex;
 }

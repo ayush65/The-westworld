@@ -1,33 +1,36 @@
-import React from "react";
-import VideoCard from "../VideoCard/VideoCard";
-import "./RecommendedVideos.css";
+import React, { useEffect, useState } from "react";
 import { onSnapshot, collection } from "firebase/firestore";
-import { useEffect, useState } from "react";
 import db from "../../firebase";
+import { useVideo } from "../Context/VideoContext";
+import PlaylistVideosCard from "./PlaylistVideosCard";
 
-function RecommendedVideos() {
-  const [videos, setvideos] = useState([]);
+function PlaylistVideos() {
+  const [posts, setPosts] = useState([]);
+
+  const { statetotal } = useVideo();
+
+  const [playlistvideos] = useState(statetotal.playlistvideo);
 
   useEffect(() => {
-    onSnapshot(collection(db, "videos"), (snapshot) => {
-      setvideos(
+    onSnapshot(collection(db, playlistvideos), (snapshot) => {
+      setPosts(
         snapshot.docs.map((doc) => ({
           id: doc.id,
           data: doc.data(),
         }))
       );
     });
-  }, []);
+  });
 
   return (
-    <div className='recommendedvideo-container'>
-      <h2>Recommended</h2>
-      <div className='recommended-video'>
-        {videos.map(
+    <div>
+      <h1>Playlists Video</h1>
+      <div className='playlistcard-video'>
+        {posts.map(
           ({
             id,
             data: {
-              name,
+              songName,
               imgsrc,
               channel,
               timestamp,
@@ -36,11 +39,11 @@ function RecommendedVideos() {
               videoid,
             },
           }) => (
-            <VideoCard
-              className='video'
+            <PlaylistVideosCard
               key={id}
               imgsrc={imgsrc}
-              songName={name}
+              value={id}
+              songName={songName}
               channelname={channel}
               avatar={channelimg}
               views={views}
@@ -54,4 +57,4 @@ function RecommendedVideos() {
   );
 }
 
-export default RecommendedVideos;
+export default PlaylistVideos;
