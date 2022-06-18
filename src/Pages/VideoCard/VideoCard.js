@@ -11,7 +11,8 @@ import db  from "../../firebase"
 import { useVideo} from "../Context/VideoContext";
 import {onSnapshot , collection, doc, setDoc} from "firebase/firestore"
 import uuid from 'react-uuid'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const reducerFunc = (statetotal , action ) => {
     switch(action.type) {
@@ -36,7 +37,6 @@ export const reducerFunc = (statetotal , action ) => {
     count: "",
     playlistvideo : "",
   };
-
 
 function VideoCard({imgsrc , avatar , songName , channelname , views , timestamp , videoid}) {
 
@@ -99,6 +99,11 @@ function VideoCard({imgsrc , avatar , songName , channelname , views , timestamp
        
       }
 
+      function notify() {
+        toast("Added to Playlist");
+      }
+      
+
 
   return (
     <div>                      
@@ -152,9 +157,10 @@ function VideoCard({imgsrc , avatar , songName , channelname , views , timestamp
             {posts.map(({ id , data : { name }})  =>  (
                                        
                     <div className="addtoplaylist-container" key={id}>
-                     <input type="checkbox"  onChange={() => {handlechange(name)}}></input>
+                     <input type="checkbox"  onChange={() => {handlechange(name)}} onClick={notify}></input>
                      <p>{name}</p>
                     </div>
+                    
                              ))}
 
           </div>
@@ -163,7 +169,7 @@ function VideoCard({imgsrc , avatar , songName , channelname , views , timestamp
          </div>
        )
       }
-    
+    <ToastContainer />
     </div>
   ) 
 }
