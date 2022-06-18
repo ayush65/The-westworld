@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 import "../VideoCard/VideoCard.css";
 import "./Playlist.css";
@@ -30,9 +32,9 @@ function PlaylistVideosCard({
 
   return (
     <div>
-      <div className='videocard-container'>
+      <div className='playlist-videocard-container'>
         <ToastContainer />
-        <img src={imgsrc} alt='' />
+        <img src={imgsrc} alt='playlists-img' className='playlist-img' />
         <div className='video-info'>
           <div className='videocard-header'>
             <img src={avatar} alt={id} className='video-avatar' />

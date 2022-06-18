@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useEffect, useState } from "react";
 import { onSnapshot, collection } from "firebase/firestore";
 import db from "../../firebase";
@@ -19,7 +21,7 @@ function PlaylistVideo() {
   }, []);
 
   return (
-    <div className='playlistvideo-container'>
+    <div className='playlistvideo-contain'>
       {playlist.map(({ id, data: { name, imgsrc } }) => (
         <PlaylistCard key={id} value={id} name={name} imgsrc={imgsrc} />
       ))}

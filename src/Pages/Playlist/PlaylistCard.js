@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -27,7 +29,7 @@ function PlaylistCard({ value, name, imgsrc }) {
           stateDispatch({ type: "addplaylist", payload: name });
         }}>
         <h1>{name}</h1>
-        <img src={imgsrc} alt='' />
+        <img src={imgsrc} alt='playlists-img' className='playlist-img' />
       </Link>
       <div className='delete-icon' onClick={() => handleDelete(value)}>
         <MdDelete />

@@ -1,9 +1,12 @@
+/** @format */
+
 .playlistvideo-container {
   flex: 0.9;
   background-color: #f9f9f9;
   padding: 40px 20px;
   padding-bottom: 0;
   display: flex;
+  width: 90%;
 }
 .playlist-container {
   display: flex;
@@ -22,17 +25,28 @@
 .delete-icon {
   text-align: center;
 }
+.playlist-videocard-container {
+  border: 1px solid gray;
+  width: 80%;
+  text-align: center;
+}
 .playlist-icon {
   text-align: center;
   text-decoration: none;
+}
+.playlist-img {
+  width: 100%;
 }
 .delete-icon {
   margin: 1rem;
   font-size: 2rem;
 }
 .playlistcard-video {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  gap: 1rem;
+  display: flex;
+  margin: 3rem;
+}
+.playlistvideo-contain {
+  display: flex;
+  width: 40%;
   margin: 3rem;
 }

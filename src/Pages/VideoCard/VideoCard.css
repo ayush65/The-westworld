@@ -1,3 +1,5 @@
+/** @format */
+
 .video-avatar {
   width: 2rem;
   height: 2rem;
@@ -67,14 +69,16 @@
 }
 @media (max-width: 500px) {
   .videocard-container {
-    width: 50%;
+    width: 100%;
     font-size: 0.2rem;
   }
   .model-icon {
     font-size: 1.3rem;
-    position: fixed;
-    margin-left: 9rem;
-    margin-top: 1rem;
+    position: absolute;
+    right: -7rem;
+  }
+  .modal-contents {
+    width: 70%;
   }
 }
 
