@@ -68,6 +68,7 @@ function VideoCard({imgsrc , avatar , songName , channelname , views , timestamp
         imgsrc: imgsrc,} ;
       await setDoc(docRef , payload);
      setInput('');
+     toast("Playlist created");
   };
   
     
@@ -85,7 +86,6 @@ function VideoCard({imgsrc , avatar , songName , channelname , views , timestamp
       const [addtolaylist , setaddtolaylist ] = useState("");
 
       const handlechange = (name) => {
-        
         setaddtolaylist(name);
         const docRef = doc(db , addtolaylist, uuid());
         const payload = {
@@ -96,6 +96,7 @@ function VideoCard({imgsrc , avatar , songName , channelname , views , timestamp
             views : views ,
             timestamp : timestamp } ;
          setDoc(docRef , payload);
+         
        
       }
 

@@ -14,7 +14,7 @@ function AllRoutes() {
   return (
     <div>
       <Routes>
-      <Route   path="/playlistvideo" element={<PlaylistVideos />} /> 
+      <Route   path="/playlistvideos" element={<PlaylistVideos />} /> 
       <Route   path="/playlist" element={<Playlist />} />  
       <Route   path="/showvideo" element={<ShowVideo />} />
       <Route   path="/" element={<Homepage />} />
