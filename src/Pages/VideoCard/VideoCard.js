@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useEffect, useState } from "react";
 import "./VideoCard.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -107,6 +109,21 @@ function VideoCard({
     toast("Added to Playlist");
   }
 
+  const handleLikechange = (name) => {
+    setaddtolaylist(name);
+    const docRef = doc(db, "like", uuid());
+    const payload = {
+      imgsrc: imgsrc,
+      avatar: avatar,
+      songName: songName,
+      channelname: channelname,
+      views: views,
+      timestamp: timestamp,
+    };
+    setDoc(docRef, payload);
+    toast("Video is been Liked");
+  };
+
   return (
     <div>
       <div className='videocard-container'>
@@ -119,7 +136,7 @@ function VideoCard({
           onClick={() => {
             stateDispatch({ type: "videoshow", payload: videoId });
           }}
-          className='text'>
+          className='text watch-now-button '>
           Watch Now
         </Link>
         <div className='video-info'>
@@ -142,7 +159,7 @@ function VideoCard({
               <RiPlayListAddLine />
               <p>Add To Playlist</p>
             </div>
-            <div className='modal-header-icon'>
+            <div className='modal-header-icon' onClick={handleLikechange}>
               <GoThumbsup />
               <p>Like</p>
             </div>

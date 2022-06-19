@@ -1,5 +1,6 @@
+/** @format */
+
 import React from "react";
-import { MdOutlineDehaze } from "react-icons/md";
 import { IoMdSearch } from "react-icons/io";
 import { FaUserAlt } from "react-icons/fa";
 import "./Header.css";
@@ -8,8 +9,7 @@ function Header() {
   return (
     <div className='header'>
       <div className='header__left'>
-        <MdOutlineDehaze />
-        <h1 className='header__logo'>WestSide</h1>
+        <h1 className='header__logo'>West World</h1>
       </div>
 
       <div className='header_input'>

@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useEffect, useState } from "react";
 import { onSnapshot, collection } from "firebase/firestore";
 import db from "../../firebase";
@@ -6,7 +8,6 @@ import PlaylistVideosCard from "./PlaylistVideosCard";
 
 function PlaylistVideos() {
   const [posts, setPosts] = useState([]);
-
   const { statetotal } = useVideo();
 
   const [playlistvideos] = useState(statetotal.playlistvideo);
@@ -26,30 +27,40 @@ function PlaylistVideos() {
     <div>
       <h1>Playlists Video</h1>
       <div className='playlistcard-video'>
-        {posts.map(
-          ({
-            id,
-            data: {
-              songName,
-              imgsrc,
-              channel,
-              timestamp,
-              views,
-              channelimg,
-              videoid,
-            },
-          }) => (
-            <PlaylistVideosCard
-              key={id}
-              imgsrc={imgsrc}
-              value={id}
-              songName={songName}
-              channelname={channel}
-              avatar={channelimg}
-              views={views}
-              timestamp={timestamp}
-              videoid={videoid}
+        {posts.length === 0 ? (
+          <div className='empty-playlist-container'>
+            <h1>No Video in the playlist</h1>
+            <img
+              src='https://c.tenor.com/7zKZuIk31GEAAAAM/bird-dance.gif'
+              alt='playlist-gif'
             />
+          </div>
+        ) : (
+          posts.map(
+            ({
+              id,
+              data: {
+                songName,
+                imgsrc,
+                channel,
+                timestamp,
+                views,
+                channelimg,
+                videoid,
+              },
+            }) => (
+              <PlaylistVideosCard
+                key={id}
+                imgsrc={imgsrc}
+                value={id}
+                songName={songName}
+                channelname={channel}
+                avatar={channelimg}
+                views={views}
+                timestamp={timestamp}
+                videoid={videoid}
+              />
+            )
           )
         )}
       </div>

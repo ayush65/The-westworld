@@ -22,9 +22,19 @@ function PlaylistVideo() {
 
   return (
     <div className='playlistvideo-contain'>
-      {playlist.map(({ id, data: { name, imgsrc } }) => (
-        <PlaylistCard key={id} value={id} name={name} imgsrc={imgsrc} />
-      ))}
+      {playlist.length === 0 ? (
+        <div className='empty-playlist-container'>
+          <h1>The playlist is empty</h1>
+          <img
+            src='https://c.tenor.com/7zKZuIk31GEAAAAM/bird-dance.gif'
+            alt='playlist-gif'
+          />
+        </div>
+      ) : (
+        playlist.map(({ id, data: { name, imgsrc } }) => (
+          <PlaylistCard key={id} value={id} name={name} imgsrc={imgsrc} />
+        ))
+      )}
     </div>
   );
 }

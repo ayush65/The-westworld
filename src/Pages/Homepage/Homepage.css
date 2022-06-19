@@ -1,4 +1,53 @@
-.homepage-components {
+/** @format */
+
+.homepage-container {
   display: flex;
-  height: 54rem;
+}
+.homepage-components {
+  flex: 0.95;
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  padding-bottom: 0;
+  text-align: center;
+}
+.homepage-img {
+  width: 50%;
+  height: 80%;
+}
+.home-logo {
+  font-family: "Lucida Console";
+  font-size: 5rem;
+  padding: 2rem;
+}
+.homepage-videos {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+}
+.home-img {
+  width: 35%;
+  padding: 3rem;
+}
+.home-para {
+  margin: 2rem;
+}
+.home-btn {
+  background-color: #023047;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+@media (max-width: 500px) {
+  .home-img {
+    width: 55%;
+    left: 10%;
+  }
+  .home-logo {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .home-h1 {
+    font-size: 1rem;
+  }
 }
