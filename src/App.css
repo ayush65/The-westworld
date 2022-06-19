@@ -1,5 +1,8 @@
-*{
+/** @format */
+
+* {
   margin: 0;
   padding: 0;
-  color: #33658A;
+  color: #023047;
+  font-family: "Arial";
 }

@@ -31,7 +31,7 @@
   text-decoration: none;
   padding: 0.5rem;
   color: white;
-  background-color: #33658a;
+  background-color: #023047;
   width: 30%;
   margin: 0.5rem;
 }
@@ -75,10 +75,13 @@
   .model-icon {
     font-size: 1.3rem;
     position: absolute;
-    right: -7rem;
+    right: -2rem;
   }
   .modal-contents {
     width: 70%;
+  }
+  .watch-now-button {
+    font-size: 0.8rem;
   }
 }
 

@@ -1,13 +1,13 @@
 import React from "react";
-import RecommendedVideos from "../Recommendedvideos/RecommendedVideos";
-import "./Homepage.css";
 import Sidebar from "../Sidebar/Sidebar";
+import HomepageComponents from "./HomepageComponents";
+import "./Homepage.css"
 
 function Homepage() {
   return (
-    <div className='homepage-components'>
+    <div className="homepage-container">
       <Sidebar />
-      <RecommendedVideos />
+      <HomepageComponents />
     </div>
   );
 }

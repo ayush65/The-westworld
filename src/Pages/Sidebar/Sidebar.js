@@ -12,40 +12,34 @@ function Sidebar() {
   return (
     <div className='sidebar-container'>
       <Link to='/' className='sidebar-icons'>
-        <h3>
+        <h1>
           <BsHouse />
-        </h3>
-        <h2>Home</h2>
+        </h1>
       </Link>
-      <Link to='/' className='sidebar-icons'>
-        <h3>
+      <Link to='/explore' className='sidebar-icons'>
+        <h1>
           <GoGlobe />
-        </h3>
-        <h2>Explore</h2>
+        </h1>
       </Link>
       <Link to='/playlist' className='sidebar-icons'>
-        <h3>
+        <h1>
           <RiPlayListAddLine />
-        </h3>
-        <h2>Playlist</h2>
+        </h1>
       </Link>
-      <Link to='/' className='sidebar-icons'>
-        <h3>
+      <Link to='/like' className='sidebar-icons'>
+        <h1>
           <GoThumbsup />
-        </h3>
-        <h2>Liked</h2>
+        </h1>
       </Link>
       <Link to='/' className='sidebar-icons'>
-        <h3>
+        <h1>
           <BsWatch />
-        </h3>
-        <h2>History</h2>
+        </h1>
       </Link>
       <Link to='/' className='sidebar-icons'>
-        <h3>
+        <h1>
           <MdWatchLater />
-        </h3>
-        <h2>Watch Later</h2>
+        </h1>
       </Link>
     </div>
   );

@@ -37,6 +37,12 @@
 .playlist-img {
   width: 100%;
 }
+.empty-playlist-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 .delete-icon {
   margin: 1rem;
   font-size: 2rem;
