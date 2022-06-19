@@ -9,7 +9,7 @@ function Header() {
   return (
     <div className='header'>
       <div className='header__left'>
-        <h1 className='header__logo'>West Side</h1>
+        <h1 className='header__logo'>West World</h1>
       </div>
 
       <div className='header_input'>

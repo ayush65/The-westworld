@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 function HomepageComponents() {
   return (
     <div className='homepage-components'>
-      <h1 className='home-logo'>West Side</h1>
-      <h1 className='home-h1'>Welcome to West Side video Library</h1>
+      <h1 className='home-logo'>The West World</h1>
+      <h1 className='home-h1'>Welcome to The West World video Library</h1>
       <p className='home-para'>
         This video is the one stop destination for you fav songs and you can
         access the videos as well as make your own playlist and much more .
