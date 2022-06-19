@@ -1,11 +1,13 @@
+/** @format */
+
 import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import HomepageComponents from "./HomepageComponents";
-import "./Homepage.css"
+import "./Homepage.css";
 
 function Homepage() {
   return (
-    <div className="homepage-container">
+    <div className='homepage-container'>
       <Sidebar />
       <HomepageComponents />
     </div>

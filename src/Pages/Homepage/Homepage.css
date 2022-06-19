@@ -19,6 +19,11 @@
   font-size: 5rem;
   padding: 2rem;
 }
+.homepage-videos {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+}
 .home-img {
   width: 35%;
   padding: 3rem;
