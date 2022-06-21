@@ -1,16 +1,15 @@
 /** @format */
 
-import React, { useState } from "react";
-import "../VideoCard/VideoCard.css";
-import "./Playlist.css";
-import db from "../../firebase";
-import { MdDelete } from "react-icons/md";
-import { useVideo } from "../Context/VideoContext";
-import { deleteDoc, doc } from "firebase/firestore";
+import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MdDelete } from "react-icons/md";
+import db from "../../firebase";
+import { deleteDoc, doc } from "firebase/firestore";
+import "../Playlist/Playlist.css";
+import "./WatchLater.css";
 
-function PlaylistVideosCard({
+function WatchLaterCard({
   id,
   imgsrc,
   value,
@@ -20,16 +19,11 @@ function PlaylistVideosCard({
   views,
   timestamp,
 }) {
-  const { statetotal } = useVideo();
-
-  const [playlists] = useState(statetotal.playlistvideo);
-
   const handleDelete = async (idle) => {
-    toast.dark("video deleted from playlist");
-    const docRef = doc(db, playlists, idle);
+    toast("video deleted from Watch Later");
+    const docRef = doc(db, "watchlater", idle);
     await deleteDoc(docRef);
   };
-
   return (
     <div>
       <div className='playlist-videocard-container'>
@@ -60,4 +54,4 @@ function PlaylistVideosCard({
   );
 }
 
-export default PlaylistVideosCard;
+export default WatchLaterCard;

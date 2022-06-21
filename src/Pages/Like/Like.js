@@ -7,7 +7,7 @@ import "./Like.css";
 
 function Like() {
   return (
-    <div className='like-clomponent'>
+    <div className='like-component'>
       <Sidebar />
       <LikeComponent />
     </div>

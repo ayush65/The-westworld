@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function HomepageComponents() {
   return (
-    <div className='homepage-components'>
+    <div className='homepage-components app'>
       <h1 className='home-logo'>The West World</h1>
       <h1 className='home-h1'>Welcome to The West World video Library</h1>
       <p className='home-para'>
