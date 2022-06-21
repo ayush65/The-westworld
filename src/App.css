@@ -3,6 +3,9 @@
 * {
   margin: 0;
   padding: 0;
-  color: #023047;
+  color: #e1faf9;
   font-family: "Arial";
+}
+.app {
+  background-color: #121212;
 }

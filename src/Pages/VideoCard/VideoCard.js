@@ -76,7 +76,7 @@ function VideoCard({
     };
     await setDoc(docRef, payload);
     setInput("");
-    toast("Playlist created");
+    toast.dark("Playlist created");
   };
 
   const toggleModal = () => {
@@ -91,7 +91,7 @@ function VideoCard({
 
   const handlechange = (e) => {
     const { value } = e.target;
-    toast("Added to Playlist");
+    toast.dark("Added to Playlist");
     const docRef = doc(db, value, uuid());
     const payload = {
       imgsrc: imgsrc,
@@ -115,7 +115,7 @@ function VideoCard({
       timestamp: timestamp,
     };
     setDoc(docRef, payload);
-    toast("Video is been Liked");
+    toast.dark("Video is been Liked");
   };
 
   const handleWatchlaterchange = () => {
@@ -129,7 +129,7 @@ function VideoCard({
       timestamp: timestamp,
     };
     setDoc(docRef, payload);
-    toast("Video is been Added to Watch Later");
+    toast.dark("Video is been Added to Watch Later");
   };
 
   return (
@@ -200,7 +200,10 @@ function VideoCard({
                     onChange={(e) => setInput(e.target.value)}
                     type='text'
                   />
-                  <button onClick={sendpost} type='submit'>
+                  <button
+                    onClick={sendpost}
+                    type='submit'
+                    className='create-button'>
                     create playlist
                   </button>
                 </form>

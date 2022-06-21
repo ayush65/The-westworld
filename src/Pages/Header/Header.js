@@ -14,10 +14,8 @@ function Header() {
 
       <div className='header_input'>
         <input className='header-input' placeholder='Search' type='text' />
+        <IoMdSearch className='header-icon' />
       </div>
-      <button type='button' className='header__button'>
-        <IoMdSearch />
-      </button>
 
       <div className='header__icons'>
         <FaUserAlt />

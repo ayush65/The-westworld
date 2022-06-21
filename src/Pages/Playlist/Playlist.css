@@ -10,13 +10,17 @@
 }
 .playlist-container {
   display: flex;
+  height: 95vh;
 }
 .playlistcard-container {
   margin: 1rem;
-  border: 1px solid gray;
   text-align: center;
   text-decoration: none;
   width: 50%;
+  height: 50%;
+}
+.playlistcard-container:hover {
+  box-shadow: 2px 2px 5px white;
 }
 .playlist-name {
   margin: 1rem;

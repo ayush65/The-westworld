@@ -28,7 +28,7 @@ function PlaylistCard({ value, name, imgsrc }) {
         onClick={() => {
           stateDispatch({ type: "addplaylist", payload: name });
         }}>
-        <h1>{name}</h1>
+        <h3>{name}</h3>
         <img src={imgsrc} alt='playlists-img' className='playlist-img' />
       </Link>
       <div className='delete-icon' onClick={() => handleDelete(value)}>
