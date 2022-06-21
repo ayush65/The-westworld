@@ -56,4 +56,7 @@
   .header {
     width: 88.3%;
   }
+  .header__icons {
+    font-size: 2rem;
+  }
 }
