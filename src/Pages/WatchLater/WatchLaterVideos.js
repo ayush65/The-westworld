@@ -4,13 +4,13 @@ import React from "react";
 import { onSnapshot, collection } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import db from "../../firebase";
-import LikeCard from "./LikeCard";
+import WatchLaterCard from "./WatchLaterCard";
 
-function LikeComponent() {
+function WatchLaterVideos() {
   const [videos, setvideos] = useState([]);
 
   useEffect(() => {
-    onSnapshot(collection(db, "like"), (snapshot) => {
+    onSnapshot(collection(db, "watchlater"), (snapshot) => {
       setvideos(
         snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -20,10 +20,10 @@ function LikeComponent() {
     });
   }, []);
   return (
-    <div className='like-component-container playlistcard-video'>
+    <div className='like-component-container playlistcard-video '>
       {videos.length === 0 ? (
         <div className='empty-playlist-container'>
-          <h1>You Have Not Liked Any Video</h1>
+          <h1>You Have No Watch Later videos</h1>
           <img
             src='https://c.tenor.com/7zKZuIk31GEAAAAM/bird-dance.gif'
             alt='playlist-gif'
@@ -43,7 +43,7 @@ function LikeComponent() {
               videoid,
             },
           }) => (
-            <LikeCard
+            <WatchLaterCard
               className='video'
               key={id}
               imgsrc={imgsrc}
@@ -62,4 +62,4 @@ function LikeComponent() {
   );
 }
 
-export default LikeComponent;
+export default WatchLaterVideos;

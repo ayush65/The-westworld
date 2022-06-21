@@ -32,7 +32,7 @@ function Sidebar() {
           <GoThumbsup />
         </h2>
       </Link>
-      <Link to='/' className='sidebar-icons'>
+      <Link to='/watchlater' className='sidebar-icons'>
         <h2>
           <BsClockHistory />
         </h2>

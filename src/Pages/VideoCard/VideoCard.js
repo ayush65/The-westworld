@@ -89,11 +89,10 @@ function VideoCard({
 
   const { stateDispatch } = useVideo();
 
-  const [addtolaylist, setaddtolaylist] = useState("");
-
-  const handlechange = (name) => {
-    setaddtolaylist(name);
-    const docRef = doc(db, addtolaylist, uuid());
+  const handlechange = (e) => {
+    const { value } = e.target;
+    toast("Added to Playlist");
+    const docRef = doc(db, value, uuid());
     const payload = {
       imgsrc: imgsrc,
       avatar: avatar,
@@ -105,12 +104,7 @@ function VideoCard({
     setDoc(docRef, payload);
   };
 
-  function notify() {
-    toast("Added to Playlist");
-  }
-
-  const handleLikechange = (name) => {
-    setaddtolaylist(name);
+  const handleLikechange = () => {
     const docRef = doc(db, "like", uuid());
     const payload = {
       imgsrc: imgsrc,
@@ -122,6 +116,20 @@ function VideoCard({
     };
     setDoc(docRef, payload);
     toast("Video is been Liked");
+  };
+
+  const handleWatchlaterchange = () => {
+    const docRef = doc(db, "watchlater", uuid());
+    const payload = {
+      imgsrc: imgsrc,
+      avatar: avatar,
+      songName: songName,
+      channelname: channelname,
+      views: views,
+      timestamp: timestamp,
+    };
+    setDoc(docRef, payload);
+    toast("Video is been Added to Watch Later");
   };
 
   return (
@@ -163,13 +171,13 @@ function VideoCard({
               <GoThumbsup />
               <p>Like</p>
             </div>
-            <div className='modal-header-icon'>
+            <div className='modal-header-icon' onClick={handleWatchlaterchange}>
               <BsWatch />
-              <p>History</p>
+              <p>Watch Later</p>
             </div>
             <div className='modal-header-icon'>
               <MdWatchLater />
-              <p>Watch Later</p>
+              <p>History</p>
             </div>
           </div>
         </div>
@@ -204,10 +212,10 @@ function VideoCard({
                   <div className='addtoplaylist-container' key={id}>
                     <input
                       type='checkbox'
-                      onChange={() => {
-                        handlechange(name);
-                      }}
-                      onClick={notify}></input>
+                      name='db-names'
+                      value={name}
+                      id='flexCheckDefault'
+                      onChange={handlechange}></input>
                     <p>{name}</p>
                   </div>
                 ))}

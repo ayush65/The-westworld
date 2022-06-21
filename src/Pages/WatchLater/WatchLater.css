@@ -1,0 +1,16 @@
+/** @format */
+
+.watchlater {
+  display: flex;
+}
+.watch-later-video {
+  flex: 0.9;
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  padding-bottom: 0;
+  display: flex;
+  width: 90%;
+}
+.playlist-videocard-container {
+  width: 80%;
+}
