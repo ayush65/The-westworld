@@ -12,8 +12,12 @@ function Header() {
         <h1 className='header__logo'>West World</h1>
       </div>
 
-      <div className='header_input'>
-        <input className='header-input' placeholder='Search' type='text' />
+      <div className='input-contain'>
+        <input
+          className='header-input input-contain'
+          placeholder='Search'
+          type='text'
+        />
         <IoMdSearch className='header-icon' />
       </div>
 

@@ -8,4 +8,10 @@
 }
 .app {
   background-color: #121212;
+  height: 60rem;
+}
+@media (max-width: 500px) {
+  .app {
+    height: 183rem;
+  }
 }

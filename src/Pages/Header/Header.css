@@ -43,3 +43,17 @@
   align-items: center;
   font-size: 1.3rem;
 }
+@media (max-width: 500px) {
+  .header__logo {
+    font-size: 0.9rem;
+  }
+  .input-contain {
+    display: none;
+  }
+  .header__icons {
+    margin-right: 1rem;
+  }
+  .header {
+    width: 88.3%;
+  }
+}

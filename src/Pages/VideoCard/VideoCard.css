@@ -72,13 +72,13 @@
 }
 @media (max-width: 500px) {
   .videocard-container {
-    width: 100%;
+    width: 85%;
     font-size: 0.2rem;
   }
   .model-icon {
     font-size: 1.3rem;
     position: absolute;
-    right: 3rem;
+    right: 5rem;
   }
   .modal-contents {
     width: 70%;

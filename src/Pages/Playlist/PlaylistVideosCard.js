@@ -25,7 +25,7 @@ function PlaylistVideosCard({
   const [playlists] = useState(statetotal.playlistvideo);
 
   const handleDelete = async (idle) => {
-    toast("video deleted from playlist");
+    toast.dark("video deleted from playlist");
     const docRef = doc(db, playlists, idle);
     await deleteDoc(docRef);
   };

@@ -52,11 +52,19 @@
   font-size: 2rem;
 }
 .playlistcard-video {
-  display: flex;
+  display: grid;
   margin: 3rem;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
 }
 .playlistvideo-contain {
   display: flex;
   width: 40%;
   margin: 3rem;
+}
+@media (max-width: 500px) {
+  .playlistcard-video {
+    grid-template-columns: auto;
+    gap: 1rem;
+  }
 }
