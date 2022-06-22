@@ -37,7 +37,7 @@ function Sidebar() {
           <BsClockHistory />
         </h2>
       </Link>
-      <Link to='/' className='sidebar-icons'>
+      <Link to='/history' className='sidebar-icons'>
         <h2>
           <MdWatchLater />
         </h2>

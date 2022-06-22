@@ -4,19 +4,11 @@
   flex: 0.05;
   justify-content: space-between;
   width: 10rem;
-}
-.sidebar-row {
-  align-items: center;
-  display: flex;
-  padding: 0.5em;
-}
-.sidebar-row:hover {
-  cursor: pointer;
-  background-color: #efebce;
-  color: white;
+  border-right: 2px solid white;
 }
 .sidebar-icons {
   padding: 1rem;
   text-decoration: none;
   display: flex;
+  color: #e1faf9;
 }

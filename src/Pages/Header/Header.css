@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid whitesmoke;
   position: sticky;
   top: 0;
   width: 97.3%;
@@ -28,7 +28,8 @@
   border: 1px solid black;
 }
 .header-icon {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  position: absolute;
   box-shadow: 2px 2px 5px white;
 }
 .header-input {

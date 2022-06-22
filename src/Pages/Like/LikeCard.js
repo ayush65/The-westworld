@@ -19,7 +19,7 @@ function LikeCard({
   timestamp,
 }) {
   const handleDelete = async (idle) => {
-    toast("video deleted from Liked");
+    toast.dark("video deleted from Liked");
     const docRef = doc(db, "like", idle);
     await deleteDoc(docRef);
   };

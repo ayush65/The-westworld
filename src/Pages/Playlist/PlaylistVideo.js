@@ -26,7 +26,7 @@ function PlaylistVideo() {
         <div className='empty-playlist-container'>
           <h1>The playlist is empty</h1>
           <img
-            src='https://c.tenor.com/7zKZuIk31GEAAAAM/bird-dance.gif'
+            src='https://thumbs.gfycat.com/HandsomeGorgeousHorse-max-1mb.gif'
             alt='playlist-gif'
           />
         </div>
