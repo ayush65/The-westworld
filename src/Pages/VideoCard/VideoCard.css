@@ -4,6 +4,8 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 .videocard-header {
   display: flex;
@@ -13,6 +15,13 @@
 .video-card-footer {
   display: flex;
   padding: 1rem;
+}
+.close-modal,
+.create-button {
+  color: white;
+}
+.input-video {
+  color: black;
 }
 .video-card-footer {
   font-size: 0.8rem;
@@ -81,7 +90,7 @@
     right: 5rem;
   }
   .modal-contents {
-    width: 70%;
+    width: 45%;
   }
   .watch-now-button {
     font-size: 0.8rem;

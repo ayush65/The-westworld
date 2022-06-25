@@ -30,6 +30,42 @@ export const reducerFunc = (statetotal, action) => {
         playlistvideo: action.payload,
       };
     }
+    case "videoshowimg": {
+      return {
+        ...statetotal,
+        imgsrc: action.payload,
+      };
+    }
+    case "videoSongname": {
+      return {
+        ...statetotal,
+        songName: action.payload,
+      };
+    }
+    case "videoviews": {
+      return {
+        ...statetotal,
+        views: action.payload,
+      };
+    }
+    case "videochannelName": {
+      return {
+        ...statetotal,
+        channelname: action.payload,
+      };
+    }
+    case "videoTimestamp": {
+      return {
+        ...statetotal,
+        timestamp: action.payload,
+      };
+    }
+    case "videoAvatar": {
+      return {
+        ...statetotal,
+        avatar: action.payload,
+      };
+    }
     default:
       return statetotal;
   }
@@ -38,6 +74,12 @@ export const reducerFunc = (statetotal, action) => {
 export const initialstate = {
   count: "",
   playlistvideo: "",
+  imgsrc: "",
+  songName: "",
+  views: "",
+  channelname: "",
+  timestamp: "",
+  videoAvatar: "",
 };
 
 function VideoCard({
@@ -132,6 +174,19 @@ function VideoCard({
     toast.dark("Video is been Added to Watch Later");
   };
 
+  const handleHistorychange = () => {
+    const docRef = doc(db, "history", uuid());
+    const payload = {
+      imgsrc: imgsrc,
+      avatar: avatar,
+      songName: songName,
+      channelname: channelname,
+      views: views,
+      timestamp: timestamp,
+    };
+    setDoc(docRef, payload);
+  };
+
   return (
     <div>
       <div className='videocard-container'>
@@ -142,7 +197,35 @@ function VideoCard({
         <Link
           to='/showvideo'
           onClick={() => {
-            stateDispatch({ type: "videoshow", payload: videoId });
+            stateDispatch({
+              type: "videoshow",
+              payload: videoId,
+            });
+            stateDispatch({
+              type: "videoshowimg",
+              payload: imgsrc,
+            });
+            stateDispatch({
+              type: "videoSongname",
+              payload: songName,
+            });
+            stateDispatch({
+              type: "videoAvatar",
+              payload: avatar,
+            });
+            stateDispatch({
+              type: "videoviews",
+              payload: views,
+            });
+            stateDispatch({
+              type: "videochannelName",
+              payload: channelname,
+            });
+            stateDispatch({
+              type: "videoTimestamp",
+              payload: timestamp,
+            });
+            handleHistorychange();
           }}
           className='text watch-now-button '>
           Watch Now
@@ -216,6 +299,7 @@ function VideoCard({
                     <input
                       type='checkbox'
                       name='db-names'
+                      className='input-video'
                       value={name}
                       id='flexCheckDefault'
                       onChange={handlechange}></input>

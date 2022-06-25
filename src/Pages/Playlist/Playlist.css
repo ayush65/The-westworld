@@ -11,6 +11,7 @@
 .playlist-container {
   display: flex;
   height: 95vh;
+  color: #e1faf9;
 }
 .playlistcard-container {
   margin: 1rem;
@@ -19,6 +20,7 @@
   width: 50%;
   height: 50%;
 }
+
 .playlistcard-container:hover {
   box-shadow: 2px 2px 5px white;
 }
@@ -43,6 +45,8 @@
 }
 .empty-playlist-container {
   position: absolute;
+  display: flex;
+  flex-wrap: column;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -62,9 +66,17 @@
   width: 40%;
   margin: 3rem;
 }
+.name-playlist {
+  color: #e1faf9;
+  text-decoration: none;
+}
 @media (max-width: 500px) {
   .playlistcard-video {
     grid-template-columns: auto;
     gap: 1rem;
+  }
+  .empty-playlist-container {
+    font-size: 0.8rem;
+    margin-left: 7rem;
   }
 }

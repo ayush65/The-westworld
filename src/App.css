@@ -3,11 +3,12 @@
 * {
   margin: 0;
   padding: 0;
-  color: #e1faf9;
+
   font-family: "Arial";
 }
 .app {
   background-color: #121212;
+  color: #e1faf9;
   height: 60rem;
 }
 @media (max-width: 500px) {

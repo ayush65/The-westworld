@@ -13,12 +13,12 @@ function Header() {
       </div>
 
       <div className='input-contain'>
-        <IoMdSearch className='header-icon' />
         <input
           className='header-input input-contain'
           placeholder='Search'
           type='text'
         />
+        <IoMdSearch className='header-icon' />
       </div>
 
       <div className='header__icons'>

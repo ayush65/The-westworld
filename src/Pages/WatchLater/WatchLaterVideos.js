@@ -10,7 +10,7 @@ function WatchLaterVideos() {
   const [videos, setvideos] = useState([]);
 
   useEffect(() => {
-    onSnapshot(collection(db, "watchlater"), (snapshot) => {
+    onSnapshot(collection(db, "history"), (snapshot) => {
       setvideos(
         snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -25,7 +25,7 @@ function WatchLaterVideos() {
         <div className='empty-playlist-container'>
           <h1>You Have No Watch Later videos</h1>
           <img
-            src='https://c.tenor.com/7zKZuIk31GEAAAAM/bird-dance.gif'
+            src='https://thumbs.gfycat.com/HandsomeGorgeousHorse-max-1mb.gif'
             alt='playlist-gif'
           />
         </div>
@@ -33,15 +33,7 @@ function WatchLaterVideos() {
         videos.map(
           ({
             id,
-            data: {
-              name,
-              imgsrc,
-              channel,
-              timestamp,
-              views,
-              channelimg,
-              videoid,
-            },
+            data: { name, imgsrc, channel, timestamp, views, avatar, videoid },
           }) => (
             <WatchLaterCard
               className='video'
@@ -50,7 +42,7 @@ function WatchLaterVideos() {
               songName={name}
               value={id}
               channelname={channel}
-              avatar={channelimg}
+              avatar={avatar}
               views={views}
               timestamp={timestamp}
               videoid={videoid}

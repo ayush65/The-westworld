@@ -20,7 +20,7 @@ function HomepageComponents() {
       </div>
       <div>
         <img
-          src='https://i.gifer.com/8QEy.gif'
+          src='https://digitalsynopsis.com/wp-content/uploads/2015/10/gif-icons-menu-transition-animations-play.gif'
           alt='home-logo'
           className='home-img'
         />
