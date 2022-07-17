@@ -7,7 +7,7 @@ import { UserAuth } from "../Context/Authcontext";
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [setError] = useState("");
   const { createUser } = UserAuth();
   const navigate = useNavigate();
 
@@ -19,7 +19,6 @@ function Signup() {
       navigate("/homepage");
     } catch (e) {
       setError(e.message);
-      console.log(error);
     }
   };
 
