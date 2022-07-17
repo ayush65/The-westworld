@@ -14,21 +14,38 @@ import {
   Signup,
   WatchLater,
 } from "../index";
+import { UserAuth } from "../Context/Authcontext";
 
 function AllRoutes() {
+  const { user } = UserAuth();
+
   return (
     <div>
       <Routes>
+        <Route
+          path='/history'
+          element={!user ? <Login /> : <History />}></Route>
         <Route path='/signup' element={<Signup />} />
-        <Route path='/history' element={<History />} />
         <Route path='/' element={<Login />} />
-        <Route path='/watchlater' element={<WatchLater />} />
-        <Route path='/like' element={<Like />} />
-        <Route path='/playlistvideos' element={<PlaylistVideos />} />
-        <Route path='/playlist' element={<Playlist />} />
-        <Route path='/showvideo' element={<VideoRendering />} />
-        <Route path='/explore' element={<Explore />} />
-        <Route path='/homepage' element={<Homepage />} />
+        <Route
+          path='/watchlater'
+          element={!user ? <Login /> : <WatchLater />}></Route>
+        <Route path='/like' element={!user ? <Login /> : <Like />}></Route>
+        <Route
+          path='/playlistvideos'
+          element={!user ? <Login /> : <PlaylistVideos />}></Route>
+        <Route
+          path='/playlist'
+          element={!user ? <Login /> : <Playlist />}></Route>
+        <Route
+          path='/showvideo'
+          element={!user ? <Login /> : <VideoRendering />}></Route>
+        <Route
+          path='/explore'
+          element={!user ? <Login /> : <Explore />}></Route>
+        <Route
+          path='/homepage'
+          element={!user ? <Login /> : <Homepage />}></Route>
       </Routes>
     </div>
   );
