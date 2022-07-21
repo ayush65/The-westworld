@@ -1,0 +1,61 @@
+/** @format */
+.login-container {
+  margin-left: 40%;
+  margin-top: 10%;
+  font-size: 1rem;
+}
+.login-text {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+.logo-txt {
+  position: absolute;
+  top: 13rem;
+}
+.container {
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 650px;
+  height: 500px;
+  margin-top: 90px;
+  background-color: #e1faf9;
+  color: #121212;
+  display: flex;
+  flex-direction: column;
+}
+.btn-test-credentials {
+  margin-left: 7rem;
+  width: 120px;
+  color: #e1faf9;
+  background-color: #121212;
+}
+.form-signup {
+  margin-top: 2rem;
+}
+.input {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  background-color: #e1faf9;
+  position: relative;
+  top: -10px;
+  padding: 5px;
+}
+.input:focus {
+  outline: none !important;
+  border-bottom: 1px solid red;
+  font-size: 14px;
+  font-weight: bold;
+}
+.label-text {
+  margin-right: 2rem;
+}
+.btn {
+  border: none;
+  background-color: red;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  width: 120px;
+  position: absolute;
+}

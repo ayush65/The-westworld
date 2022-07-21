@@ -2,27 +2,50 @@
 
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Explore from "../Explore/Explore";
-import History from "../History/History";
-import Homepage from "../Homepage/Homepage";
-import Like from "../Like/Like";
-import Playlist from "../Playlist/Playlist";
-import PlaylistVideos from "../Playlist/PlaylistVideos";
-import VideoRendering from "../ShowVideo/VideoRendering";
-import WatchLater from "../WatchLater/WatchLater";
+import {
+  Explore,
+  History,
+  Homepage,
+  Like,
+  Login,
+  Playlist,
+  PlaylistVideos,
+  VideoRendering,
+  Signup,
+  WatchLater,
+} from "../index";
+import { UserAuth } from "../Context/Authcontext";
 
 function AllRoutes() {
+  const { user } = UserAuth();
+
   return (
     <div>
       <Routes>
-        <Route path='/history' element={<History />} />
-        <Route path='/watchlater' element={<WatchLater />} />
-        <Route path='/like' element={<Like />} />
-        <Route path='/playlistvideos' element={<PlaylistVideos />} />
-        <Route path='/playlist' element={<Playlist />} />
-        <Route path='/showvideo' element={<VideoRendering />} />
-        <Route path='/explore' element={<Explore />} />
-        <Route path='/' element={<Homepage />} />
+        <Route
+          path='/history'
+          element={!user ? <Login /> : <History />}></Route>
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/' element={<Login />} />
+        <Route
+          path='/watchlater'
+          element={!user ? <Login /> : <WatchLater />}></Route>
+        <Route path='/like' element={!user ? <Login /> : <Like />}></Route>
+        <Route
+          path='/playlistvideos'
+          element={!user ? <Login /> : <PlaylistVideos />}></Route>
+        <Route
+          path='/playlist'
+          element={!user ? <Login /> : <Playlist />}></Route>
+        <Route
+          path='/showvideo'
+          element={!user ? <Login /> : <VideoRendering />}></Route>
+        <Route
+          path='/explore'
+          element={!user ? <Login /> : <Explore />}></Route>
+        <Route
+          path='/homepage'
+          element={!user ? <Login /> : <Homepage />}></Route>
       </Routes>
     </div>
   );
